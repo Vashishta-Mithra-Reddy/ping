@@ -5,7 +5,7 @@ import logging
 
 def ping_endpoints():
     endpoints = [
-        "https://moon-0l6a.onrender.com/"
+        "https://daunrodo.onrender.com/"
     ]
     
     for url in endpoints:
