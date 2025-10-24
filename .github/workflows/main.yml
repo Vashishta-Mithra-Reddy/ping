@@ -1,12 +1,14 @@
 name: Ping Services
+
 on:
   schedule:
-    - cron: "*/10 * * * *"
-  workflow_dispatch:
+    - cron: "*/10 * * * *"  # every 10 minutes
+  workflow_dispatch:  # allows manual trigger
 
 jobs:
   ping-services:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
 
@@ -18,9 +20,13 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests
+          pip install -r requirements.txt
 
       - name: Run Ping Script
+        run: python ping_script.py
+
+      - name: Run Ahara Ping Script
         env:
           AHARA_BEARER_TOKEN: ${{ secrets.AHARA_BEARER_TOKEN }}
-        run: python ping_script.py
+          AHARA_SIGNING_SECRET: ${{ secrets.AHARA_SIGNING_SECRET }}
+        run: python ping_ahara.py
