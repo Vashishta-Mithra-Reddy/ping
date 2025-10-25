@@ -25,8 +25,8 @@ jobs:
       - name: Run Ping Script
         run: python ping_script.py
 
-      - name: Run Ahara Ping Script
-        env:
-          AHARA_BEARER_TOKEN: ${{ secrets.AHARA_BEARER_TOKEN }}
-          AHARA_SIGNING_SECRET: ${{ secrets.AHARA_SIGNING_SECRET }}
-        run: python ping_ahara.py
+      # - name: Run Ahara Ping Script
+      #   env:
+      #     AHARA_BEARER_TOKEN: ${{ secrets.AHARA_BEARER_TOKEN }}
+      #     AHARA_SIGNING_SECRET: ${{ secrets.AHARA_SIGNING_SECRET }}
+      #   run: python ping_ahara.py
