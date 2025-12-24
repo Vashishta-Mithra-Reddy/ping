@@ -165,6 +165,7 @@ logging.basicConfig(level=logging.DEBUG)
 - **Health Monitoring**: Regular health checks for web applications
 - **Service Discovery**: Test service availability in CI/CD pipelines
 - **Uptime Monitoring**: Basic monitoring solution for small projects
+- **Using this for a push notification system**
 
 ## 🤝 Contributing
 
