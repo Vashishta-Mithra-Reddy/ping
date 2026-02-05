@@ -6,7 +6,6 @@ A lightweight Python utility that monitors web service availability by sending p
 
 - **Automated Service Monitoring**: Ping multiple endpoints to check availability
 - **GitHub Actions Integration**: Runs automatically every 10 minutes
-- **Error Handling**: Robust error handling with detailed logging
 - **Configurable Timeouts**: Customizable request timeout settings  
 - **Easy Configuration**: Simple endpoint management
 - **Manual Execution**: Can be run locally or triggered manually
